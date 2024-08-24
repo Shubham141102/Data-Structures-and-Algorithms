@@ -1,8 +1,5 @@
-
-
 #include<iostream>
 using namespace std;
-
 void pattern1(){
 // ****
 // ****
@@ -83,7 +80,6 @@ void pattern5()
             cout<<"*";
         }
         cout<<endl;
-        
     }
 }
 // -----------------------------------------------------------
@@ -94,9 +90,9 @@ void pattern6()
     // 123
     // 12
     // 1
-    for (int rows = 5; rows >= 1; rows--)
+    for (int rows = 0; rows <5; rows++)
     {
-        for (int cols = 1; cols <=rows; cols++)
+        for (int cols = 1; cols <=5-rows; cols++)
         {
             cout<<cols;
         }
@@ -132,30 +128,79 @@ void pattern7()
 // -----------------------------------------
 void pattern8()
 {
-//     *    
-//    ***   
-//   *****  
-//  ******* 
 // *********
-    for (int rows = 4; rows >=0 ; rows--)
+//  ******* 
+//   *****  
+//    ***   
+//     *  
+    for (int rows = 0; rows < 3; rows++)
     {
-        for (int cols = 1; cols <=5-rows-1; cols++)
+        for (int cols = 0; cols < rows; cols++)
         {
             cout<<" ";
         }
-        for (int cols = 1; cols <=2*rows+1; cols++)
+        for (int cols = 0; cols < 2*3 - (2*rows+1); cols++)
         {
             cout<<"*";
         }
-        for (int cols = 1; cols <=5-rows-1; cols++)
+        for (int cols = 0; cols < rows; cols++)
         {
             cout<<" ";
         }
         cout<<endl;
+        
     }
+    
+}
+// -------------------------------------------------------------------
+void pattern9()
+{
+// *********
+//  ******* 
+//   *****  
+//    ***   
+//     *  
+    for (int rows = 0; rows < 3; rows++)
+    {
+        for (int cols = 0; cols < rows; cols++)
+        {
+            cout<<" ";
+        }
+        for (int cols = 0; cols < 2*3 - (2*rows+1); cols++)
+        {
+            cout<<"*";
+        }
+        for (int cols = 0; cols < rows; cols++)
+        {
+            cout<<" ";
+        }
+        cout<<endl;
+        
+    }
+    
+}
+void pattern10(int n)
+{
+  
+    for (int rows = 1; rows <= 2*n-1; rows++)
+    {
+        int stars = rows;
+        if (rows>n)
+        {
+            stars = 2*n - rows;
+        }
+        
+        for (int col = 0; col < stars; col++)
+        {
+            cout<<"*";
+        }
+        
+        cout<<endl;
+    }
+    
 }
 int main()
 {
-    pattern8();
+    pattern10(5);
     
 }
