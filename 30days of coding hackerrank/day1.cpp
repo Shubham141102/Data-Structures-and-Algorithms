@@ -1,28 +1,10 @@
+// Solve Me First
+// Simple Array Sum
+// Compare the Triplets
+// A Very Big Sum
+
 // question 1 link = https://www.hackerrank.com/challenges/solve-me-first/problem
-// Complete the function solveMeFirst to compute the sum of two integers.
-// Example
-// a=7
-// b=3
 
-// Return 10.
-
-// Function Description
-
-// Complete the solveMeFirst function in the editor below.
-
-// solveMeFirst has the following parameters:
-
-// int a: the first value
-// int b: the second value
-// Returns
-// - int: the sum of  a and b 
-// Constraints
-// Sample Input
-// a = 2
-// b = 3
-// Sample Output
-// 5
-// solution =>
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -30,47 +12,69 @@
 #include <algorithm>
 using namespace std;
 
-int solveMeFirst(int a, int b) {
- // Hint: Type return a+b; below:
-  return a+b;
+int solveMeFirst(int a, int b)
+{
+  // Hint: Type return a+b; below:
+  return a + b;
 }
 
-int main() {
+int main()
+{
   int num1, num2;
   int sum;
-  cin>>num1>>num2;
-  sum = solveMeFirst(num1,num2);
-  cout<<sum;
+  cin >> num1 >> num2;
+  sum = solveMeFirst(num1, num2);
+  cout << sum;
   return 0;
 }
 // --------------------------------------------------------------------------------
 
-// Question - 02 = Simple Array Sum
-// Given an array of integers, find the sum of its elements.
+// Question - 02 = Simple Array Sum Question link - https://www.hackerrank.com/challenges/simple-array-sum/problem
 
-// For example, if the array , , so return .
+int simpleArraySum(vector<int> ar)
+{
+  int sum = 0;
+  for (int i = 0; i < ar.size(); i++)
+  {
+    sum = sum + ar[i];
+  }
+  return sum;
+}
+// --------------------------------------------------------------------------------
+// question link => https://www.hackerrank.com/challenges/compare-the-triplets/problem
+vector<int> compareTriplets(vector<int> a, vector<int> b)
+{
+  int count_a = 0, count_b = 0;
+  for (int i = 0; i <= a.size() - 1; i++)
+  {
+    if (a[i] > b[i])
+    {
+      count_a++;
+    }
+    else if (a[i] == b[i])
+    {
+      count_a = count_a + 0;
+      count_b = count_b + 0;
+    }
+    else
+    {
+      count_b++;
+    }
+  }
 
-// Function Description
-
-// Complete the simpleArraySum function in the editor below. It must return the sum of the array elements as an integer.
-
-// simpleArraySum has the following parameter(s):
-
-// ar: an array of integers
-// Input Format
-
-// The first line contains an integer, , denoting the size of the array.
-// The second line contains  space-separated integers representing the array's elements.
-
-
-
-// Print the sum of the array's elements as a single integer.
-
-// Sample Input
-
-// 6
-// 1 2 3 4 10 11
-// Sample Output
-
-// 31
-
+  vector<int> ans;
+  ans.push_back(count_a);
+  ans.push_back(count_b);
+  return ans;
+}
+// -----------------------------------------------------------------------------------------
+// wuestion link =>https://www.hackerrank.com/challenges/a-very-big-sum/problem
+long aVeryBigSum(vector<long> ar)
+{
+  long long sum = 0;
+  for (int i = 0; i < ar.size(); i++)
+  {
+    sum = sum + ar[i];
+  }
+  return sum;
+}
