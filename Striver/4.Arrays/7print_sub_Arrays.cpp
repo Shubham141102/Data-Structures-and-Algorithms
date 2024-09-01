@@ -4,6 +4,9 @@ int main()
 {
     int arr[5]={1,2,3,4,5};
     int count=0;
+    int sum = 0;
+    int m = 3;
+    int len = 0;
     for (int i = 0; i < 5; i++)
     {
         for (int j = i; j < 5; j++)
@@ -12,13 +15,11 @@ int main()
             {
                 cout<<arr[k]<<" ";
             }
+           
             cout<<endl;
             count++;
-            
         }
         cout<<endl;
-        
     }
-    cout<<count;
-    
+    cout<<len;
 }
